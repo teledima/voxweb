@@ -1,0 +1,5 @@
+.idea/
+parser/chromedriver
+news/static
+news/news_site/migrations
+news/news_api/migrations
