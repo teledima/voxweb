@@ -8,9 +8,10 @@ import unicodedata
 import mysql.connector
 import uuid
 
-CHROMEDRIVER_PATH = 'chromedriver/chromedriver.exe'
-
-service = Service(ChromeDriverManager(path='chromedriver').install())
+service = Service(
+    ChromeDriverManager(path='chromedriver').install(),
+    service_args=['--ignore-certificate-errors', '--ignore-ssl-errors']
+)
 driver = webdriver.Chrome(service=service)
 
 
